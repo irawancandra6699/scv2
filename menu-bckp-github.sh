@@ -130,14 +130,14 @@ echo -e "[ ${GREEN}INFO${NC} ] Processing... "
 mkdir -p /root/backup
 sleep 1
 
-cp -r /root/.acme.sh /root/backup/ &> /dev/null
-cp -r /etc/passwd /root/backup/ &> /dev/null
-cp -r /etc/group /root/backup/ &> /dev/null
-cp -r /etc/shadow /root/backup/ &> /dev/null
-cp -r /etc/gshadow /root/backup/ &> /dev/null
-cp -r /etc/wireguard /root/backup/wireguard &> /dev/null
-cp -r /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
-cp -r /etc/ipsec.d/passwd /root/backup/passwd1 &> /dev/null
+cp -r /root/.acme.sh /root/backup/ &> /dev/null  
+cp -r /etc/passwd /root/backup/ &> /dev/null  
+cp -r /etc/group /root/backup/ &> /dev/null  
+cp -r /etc/shadow /root/backup/ &> /dev/null  
+cp -r /etc/gshadow /root/backup/ &> /dev/null  
+cp -r /etc/wireguard /root/backup/wireguard &> /dev/null  
+cp -r /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null  
+cp -r /etc/ipsec.d/passwd /root/backup/passwd1 &> /dev/null  
 cp -r /etc/shadowsocks-libev/akun.conf /root/backup/ss.conf &> /dev/null
 cp -r /var/lib/scrz-prem/ /root/backup/scrz-prem &> /dev/null
 cp -r /home/sstp /root/backup/sstp &> /dev/null
@@ -174,15 +174,15 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 
 Save_And_Exit () {
     cd /root/user-backup
-    git config --global user.email "105465912+kenDevXD@users.noreply.github.com" &> /dev/null
-    git config --global user.name "kenDevXD" &> /dev/null
+    git config --global user.email "irawancandra6699@gmail.com" &> /dev/null
+    git config --global user.name "irawancandra6699" &> /dev/null
     rm -fr .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/kenDevXD/userbackup
-    git push -f https://ghp_BCugzEPypFU5MNGL17w41UcWxFw4F15sYSH@github.com/kenDevXD/userbackup.git &> /dev/null
+    git remote add origin https://github.com/irawancandra6699/userbackup
+    git push -f https://github.com/irawancandra6699/userbackup &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -197,7 +197,7 @@ sleep 1
 echo -e "[ ${GREEN}INFO${NC} ] Processing updating server...... "
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/kenDevXD/userbackup/main/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/irawancandra6699/userbackup/main/$NameUser/$NameUser.zip"
 sleep 1
 echo -e "[ ${GREEN}INFO${NC} ] Backup done "
 sleep 1
@@ -227,7 +227,7 @@ function restore(){
 cd
 read -rp "Enter Name File Your Backup  : " -e NameUser
 
-cekdata=$(curl -sS https://raw.githubusercontent.com/kenDevXD/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
+cekdata=$(curl -sS https://raw.githubusercontent.com/irawancandra6699/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
 
 [[ "$cekdata" = "404" ]] && {
 red "Data not found / you never backup"
@@ -240,7 +240,7 @@ echo -e "[ ${GREEN}INFO${NC} ] • Restore Data..."
 read -rp "Password File: " -e InputPass
 echo -e "[ ${GREEN}INFO${NC} ] • Downloading data.."
 mkdir -p /root/backup
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/kenDevXD/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
+wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/irawancandra6699/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Getting your data..."
 unzip -P $InputPass /root/backup/backup.zip &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Starting to restore data..."
@@ -296,9 +296,9 @@ echo -e "${BICyan} ┌───────────────────�
 echo -e "       ${BIWhite}${UWhite}Backup / Restore ${NC}"
 echo -e ""
 echo -e "     ${BICyan}[${BIWhite}1${BICyan}] Backup   "
-#echo -e "     ${BICyan}[${BIWhite}2${BICyan}] Auto Backup   "
+echo -e "     ${BICyan}[${BIWhite}2${BICyan}] Auto Backup   "
 echo -e "     ${BICyan}[${BIWhite}2${BICyan}] Restore      "
-#echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Check User XRAY     "
+echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Check User XRAY     "
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BIYellow}Press x or [ Ctrl+C ] • To-${BIWhite}Exit${NC}"
 echo ""
