@@ -218,7 +218,7 @@ case $opt in
 7) clear ; autoreboot ;;
 8) clear ; reboot ;;
 9) clear ; restart ;;
-10) clear ; menu-bckp ;;
+10) clear ; menu-bckp-github ;;
 11) clear ; addhost ;;
 12) clear ; genssl ;;
 13) clear ; nano /etc/issue.net ;;
@@ -226,7 +226,7 @@ case $opt in
 15) clear ; cek-trafik ;;
 16) clear ; cek-speed ;;
 17) clear ; cek-bandwidth ;;
-#18) clear ; cek-ram ;;
+318) clear ; cek-ram ;;
 18) clear ; limit-speed ;;
 19) clear ; wbm ;;
 20) clear ; cat /root/log-install.txt ;;
