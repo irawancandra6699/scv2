@@ -43,8 +43,8 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/NevermoreSSH/Blueblue/main/test"
-export Server1_URL="raw.githubusercontent.com/NevermoreSSH/Blueblue/main/limit"
+export Server_URL="raw.githubusercontent.com/irawancandra/scv2/main/test"
+export Server1_URL="raw.githubusercontent.com/irawancandra/scv2/main/limit"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -75,9 +75,9 @@ off='\x1b[m'
 
 clear
 echo -e ""
-echo -e "${cyan}======================================${off}"
+echo -e "${cyan}======================================${on}"
 echo -e        "           BANDWITH MONITOR " | lolcat
-echo -e "${cyan}======================================${off}"
+echo -e "${cyan}======================================${on}"
 echo -e "${green}"
 echo -e " 1 ⸩ View Total Bandwidth Remaining"
 
@@ -101,22 +101,22 @@ echo -e " 10 ⸩ View Current Active Usage Traffic [5s]"
 
 echo -e "     x ⸩   Menu"
 echo -e "${off}"
-echo -e "${cyan}======================================${off}"
+echo -e "${cyan}======================================${on}"
 echo -e "${green}"
 read -p "     [#]  Masukkan Nomor :  " noo
 echo -e "${off}"
 
 case $noo in
 1)
-echo -e "${cyan}======================================${off}"
+echo -e "${cyan}======================================${on}"
 echo -e "    TOTAL SERVER BANDWITH REMAINING" | lolcat
-echo -e "${cyan}======================================${off}"
+echo -e "${cyan}======================================${on}"
 echo -e ""
 
 vnstat
 
 echo -e ""
-echo -e "${cyan}======================================${off}"
+echo -e "${cyan}======================================${on}"
 echo -e "$baris2" | lolcat
 ;;
 
