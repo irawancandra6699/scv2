@@ -43,8 +43,8 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/NevermoreSSH/Blueblue/main/test"
-export Server1_URL="raw.githubusercontent.com/NevermoreSSH/Blueblue/main/limit"
+export Server_URL="raw.githubusercontent.com/irawancandra/scv2/main/test"
+export Server1_URL="raw.githubusercontent.com/irawancandra/scv2/main/limit"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -164,7 +164,7 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-export sem=$( curl -s https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/test/versions)
+export sem=$( curl -s https://raw.githubusercontent.com/irawancandra/scv2/main/test/versions)
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
@@ -203,7 +203,7 @@ echo -e " ${BICyan}[${BIWhite}11${BICyan}]${RED} •${NC} ${CYAN}ADD HOST       
 echo -e " ${BICyan}[${BIWhite} X ${BICyan}] TYPE X FOR EXIT ${BICyan}${BIYellow}${BICyan}${NC}"  
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                ⇱ FREE TUNNELING PROJECT ⇲                    \E[0m"
+echo -e "\E[44;1;39m                ⇱ PREMIUM TUNNELING PROJECT ⇲                    \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo
 read -p " Select menu : " opt
@@ -232,7 +232,7 @@ case $opt in
 20) clear ; cat /root/log-install.txt ;;
 21) clear ; clearlog ;;
 #99) clear ; update ;;
-22) clear ; wget https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/cf.sh && chmod +x cf.sh && ./cf.sh ;;
+22) clear ; wget https://raw.githubusercontent.com/irawancandra/scv2/main/cf.sh && chmod +x cf.sh && ./cf.sh ;;
 
 0) clear ; menu ;;
 x) exit ;;
