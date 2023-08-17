@@ -1,10 +1,10 @@
 #!/bin/bash
 # //====================================================
 # //	System Request:Debian 9+/Ubuntu 18.04+/20+
-# //	Author:	elliez667
+# //	Author:	candrastore
 # //	Dscription: Xray Menu Management
-# //	email: elliez667@gmail.com
-# //  telegram: https://t.me/todfix667
+# //	email: irawancandra6699@gmail.com
+# //  telegram: https://t.me/CandraVpnz
 # //====================================================
 
 source /etc/os-release
