@@ -45,8 +45,8 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/NevermoreSSH/Blueblue/main/test"
-export Server1_URL="raw.githubusercontent.com/NevermoreSSH/Blueblue/main/limit"
+export Server_URL="raw.githubusercontent.com/irawancandra/scv2/main/test"
+export Server1_URL="raw.githubusercontent.com/irawancandra/scv2/main/limit"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -77,7 +77,7 @@ fi
 
 # // Checking VPS Status > Got Banned / No
 if [[ $IP == "$( curl -s https://${Server_URL}/blacklist.txt | cut -d ' ' -f 1 | grep -w $IP | head -n1 )" ]]; then
-    echo -e "${EROR} 403 Forbidden ( Your VPS Has Been Banned )"
+    echo -e "${run} 403 OK ( DONE )"
     exit  1
 fi
 
@@ -131,11 +131,11 @@ echo -e "[ ${green}INFO${NC} ] Processing... "
 mkdir -p /root/backup
 sleep 1
 
-cp -r /root/.acme.sh /root/backup/ &> /dev/null
-cp /etc/passwd /root/backup/ &> /dev/null
-cp /etc/group /root/backup/ &> /dev/null
-cp -r /var/lib/scrz-prem/ /root/backup/scrz-prem &> /dev/null
-cp -r /etc/xray /root/backup/xray &> /dev/null
+cp -r /root/.acme.sh /root/backup/ &> /dev/null 
+cp /etc/passwd /root/backup/ &> /dev/null 
+cp /etc/group /root/backup/ &> /dev/null 
+cp -r /var/lib/scrz-prem/ /root/backup/scrz-prem &> /dev/null 
+cp -r /etc/xray /root/backup/xray &> /dev/null 
 cp -r /etc/nginx/conf.d /root/backup/nginx &> /dev/null
 cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
 cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
@@ -150,8 +150,8 @@ Your IP VPS  : $IP" https://api.telegram.org/bot$token/sendDocument &> /dev/null
 
 rm -fr /root/backup &> /dev/null
 rm -fr /root/user-backup &> /dev/null
-rm -f /root/$NameUser.zip &> /dev/null
-rm -f /root/$IP.zip &> /dev/null
+rm -f /root/$NameUser.zip &> /dev/null 
+rm -f /root/$IP.zip &> /dev/null 
 
 echo " Please Check Your Channel"
 echo -e ""
@@ -209,7 +209,7 @@ zip -rP $InputPass $NameUser.zip backup > /dev/null 2>&1
 ##############++++++++++++++++++++++++#############
 LLatest=`date`
 Get_Data () {
-git clone https://github.com/kenDevXD/userbackup.git /root/user-backup/ &> /dev/null
+git clone https://github.com/irawancandra6699/userbackup.git /root/user-backup/ &> /dev/null
 }
 
 Mkdir_Data () {
@@ -228,15 +228,15 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 
 Save_And_Exit () {
     cd /root/user-backup
-    git config --global user.email "ambebalong@gmail.com" &> /dev/null
-    git config --global user.name "kenDevXD" &> /dev/null
+    git config --global user.email "irawancandra6699@gmail.com" &> /dev/null
+    git config --global user.name "irawancandra6699" &> /dev/null
     rm -fr .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/kenDevXD/userbackup
-    git push -f https://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@github.com/kenDevXD/userbackup.git &> /dev/null
+    git remote add origin https://github.com/irawancandra6699/userbackup
+    git push -f https://github.com/irawancandra6699/userbackup &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -251,7 +251,7 @@ sleep 1
 echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/kenDevXD/userbackup/main/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/irawancandra6699/userbackup/main/$NameUser/$NameUser.zip"
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Backup done "
 sleep 1
@@ -280,7 +280,7 @@ function restore(){
 cd
 read -rp "Enter Name File Your Backup  : " -e NameUser
 
-cekdata=$(curl -sS https://raw.githubusercontent.com/kenDevXD/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
+cekdata=$(curl -sS https://raw.githubusercontent.com/irawancandra6699/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
 
 [[ "$cekdata" = "404" ]] && {
 red "Data not found / you never backup"
@@ -293,7 +293,7 @@ echo -e "[ ${green}INFO${NC} ] • Restore Data..."
 read -rp "Password File: " -e InputPass
 echo -e "[ ${green}INFO${NC} ] • Downloading data.."
 mkdir /root/backup
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/kenDevXD/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
+wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/irawancandra6699/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
 echo -e "[ ${green}INFO${NC} ] • Getting your data..."
 unzip -P $InputPass /root/backup/backup.zip &> /dev/null
 echo -e "[ ${green}INFO${NC} ] • Starting to restore data..."
