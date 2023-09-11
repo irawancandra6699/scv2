@@ -328,7 +328,7 @@ cd /root/limit
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/irawancandra6699/limit
-    git push -f https://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@github.com/irawancandra6699/limit.git &> /dev/null
+    git push -f https://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@github.com/irawancandra6699/limit.git &> /dev/null
 cd
 echo "1.1" >> /home/.ver
 rm -fr /root/limit
